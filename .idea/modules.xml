@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Calculator/Calculator.iml" filepath="$PROJECT_DIR$/Calculator/Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calendar/Calendar.iml" filepath="$PROJECT_DIR$/Calendar/Calendar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parallelepiped/src/com/gmail/zavsek_o2/ChinaDynasty/ChinaDynasty.iml" filepath="$PROJECT_DIR$/Parallelepiped/src/com/gmail/zavsek_o2/ChinaDynasty/ChinaDynasty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Coordinates/Coordinates.iml" filepath="$PROJECT_DIR$/Coordinates/Coordinates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameRandomNumber/GameRandomNumber.iml" filepath="$PROJECT_DIR$/GameRandomNumber/GameRandomNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IdeaProjects.iml" filepath="$PROJECT_DIR$/.idea/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parallelepiped/src/com/gmail/zavsek_o2/Parallelepiped/Parallelepiped.iml" filepath="$PROJECT_DIR$/Parallelepiped/src/com/gmail/zavsek_o2/Parallelepiped/Parallelepiped.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShuttleNuimbers2/ShuttleNuimbers2.iml" filepath="$PROJECT_DIR$/ShuttleNuimbers2/ShuttleNuimbers2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShuttleNumbers/ShuttleNumbers.iml" filepath="$PROJECT_DIR$/ShuttleNumbers/ShuttleNumbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Teach/Teach.iml" filepath="$PROJECT_DIR$/Teach/Teach.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parallelepiped/src/com/gmail/zavsek_o2/TeamWinner/TeamWinner.iml" filepath="$PROJECT_DIR$/Parallelepiped/src/com/gmail/zavsek_o2/TeamWinner/TeamWinner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parallelepiped/src/com/gmail/zavsek_o2/counter-strike/counter-strike.iml" filepath="$PROJECT_DIR$/Parallelepiped/src/com/gmail/zavsek_o2/counter-strike/counter-strike.iml" />
+    </modules>
+  </component>
+</project>
