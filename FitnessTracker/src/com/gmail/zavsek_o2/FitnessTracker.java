@@ -2,7 +2,7 @@ package com.gmail.zavsek_o2;
 
 class FitnessTracker {
     private final String firstName;
-    public String lastName;
+    private String lastName;
     private final String email;
     private final String phoneNumber;
     private int weight;
@@ -12,6 +12,7 @@ class FitnessTracker {
     private final int dayOfBirth;
     private final int monthOfBirth;
     private final int yearOfBirth;
+    private static final int CURRENT_YEAR = 2020;
 
     public FitnessTracker(String firstName, String lastName, String email, String phoneNumber, int weight, int bloodPressure, int stepsTaken, int dayOfBirth, int monthOfBirth, int yearOfBirth) {
         this.firstName = firstName;
@@ -25,9 +26,7 @@ class FitnessTracker {
         this.monthOfBirth = monthOfBirth;
         this.yearOfBirth = yearOfBirth;
 
-
-        int currentYear = 2020;
-        this.age = currentYear - yearOfBirth;
+        this.age = CURRENT_YEAR - yearOfBirth;
     }
 
     public String getFirstName() {
@@ -76,7 +75,7 @@ class FitnessTracker {
 
     public void printAccountInfo() {
         System.out.println("Имя: " + firstName + " " + lastName);
-        System.out.println("Дата рождения: " + dayOfBirth + "." + monthOfBirth + "." + yearOfBirth + " (" + age + " років)");
+        System.out.println("Дата рождения: " + dayOfBirth + "." + monthOfBirth + "." + yearOfBirth + " (" + age + " лет)");
         System.out.println("Емейл: " + email);
         System.out.println("Телефон: " + phoneNumber);
         System.out.println("Вес: " + weight);

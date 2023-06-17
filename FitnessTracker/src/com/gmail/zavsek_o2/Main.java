@@ -10,12 +10,12 @@ public class Main {
         secondUser.printAccountInfo();
         thirdUser.printAccountInfo();
 
-        firstUser.lastName = "Шевченко";
+        firstUser.getLastName();
         firstUser.setWeight(75);
         firstUser.setBloodPressure(125);
         firstUser.setStepsTaken(6000);
 
-        secondUser.lastName = "Ребров";
+        secondUser.getLastName();
         secondUser.setWeight(70);
         secondUser.setBloodPressure(115);
         secondUser.setStepsTaken(9000);
