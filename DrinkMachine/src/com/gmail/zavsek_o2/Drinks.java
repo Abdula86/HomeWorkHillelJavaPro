@@ -1,60 +1,39 @@
 package com.gmail.zavsek_o2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 class Drinks {
-    private static final double COFFEE_PRICE = 18;
-    private static final double TEA_PRICE = 10;
-    private static final double LEMONADE_PRICE = 20;
-    private static final double MOJITO_PRICE = 35;
-    private static final double MINERAL_WATER_PRICE = 15;
-    private static final double COCA_COLA_PRICE = 30;
+    private static final Map<DrinksMachine, Double> prices = new HashMap<>();
 
-    private static int totalDrinksCount = 0;
-    private static double totalAmount = 0.0;
+    static {
+        prices.put(DrinksMachine.КОФЕ, 15.0);
+        prices.put(DrinksMachine.ЧАЙ, 10.0);
+        prices.put(DrinksMachine.ЛИМОНАД, 20.0);
+        prices.put(DrinksMachine.МАХИТО, 30.0);
+        prices.put(DrinksMachine.МИНЕРАЛКА, 15.0);
+        prices.put(DrinksMachine.КОКА_КОЛА, 25.0);
+    }
 
-    public static void makeDrink(DrinksMachine drink) {
-        switch (drink) {
-            case COFFEE:
-                System.out.println("Приготовление кофе");
-                totalDrinksCount++;
-                totalAmount += COFFEE_PRICE;
-                break;
-            case TEA:
-                System.out.println("Приготовление чая");
-                totalDrinksCount++;
-                totalAmount += TEA_PRICE;
-                break;
-            case LEMONADE:
-                System.out.println("Приготовление Лимонада");
-                totalDrinksCount++;
-                totalAmount += LEMONADE_PRICE;
-                break;
-            case MOJITO:
-                System.out.println("Приготовление Мохито");
-                totalDrinksCount++;
-                totalAmount += MOJITO_PRICE;
-                break;
-            case MINERAL_WATER:
-                System.out.println("Раздача минеральной воды");
-                totalDrinksCount++;
-                totalAmount += MINERAL_WATER_PRICE;
-                break;
-            case COCA_COLA:
-                System.out.println("Раздача Кока-Колы");
-                totalDrinksCount++;
-                totalAmount += COCA_COLA_PRICE;
-                break;
-            default:
-                System.out.println("Неверный выбор напитка");
-                break;
+    private int quantity;
+    private double totalPrice;
+
+    public void makeDrink(DrinksMachine drinksMachine) {
+        double price = prices.getOrDefault(drinksMachine, 0.0);
+        if (price > 0.0) {
+            quantity++;
+            totalPrice += price;
+            System.out.println("Приготовлен напиток: " + drinksMachine);
+        } else {
+            System.out.println("Неизвестный напиток: " + drinksMachine);
         }
     }
 
-    public static int getTotalDrinksCount() {
-        return totalDrinksCount;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public static double getTotalAmount() {
-        return totalAmount;
+    public double getTotalPrice() {
+        return totalPrice;
     }
 }
-
