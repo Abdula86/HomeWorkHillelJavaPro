@@ -1,10 +1,10 @@
 package com.gmail.zavsek_o2;
 
 enum DrinksMachine {
-    КОФЕ,
-    ЧАЙ,
-    ЛИМОНАД,
-    МАХИТО,
-    МИНЕРАЛКА,
-    КОКА_КОЛА
+    COFFEE,
+    TEA,
+    LEMONADE,
+    MOJITO,
+    MINERAL_WATER,
+    COCA_COLA
 }

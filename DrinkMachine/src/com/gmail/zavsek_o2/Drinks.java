@@ -7,12 +7,12 @@ class Drinks {
     private static final Map<DrinksMachine, Double> prices = new HashMap<>();
 
     static {
-        prices.put(DrinksMachine.КОФЕ, 15.0);
-        prices.put(DrinksMachine.ЧАЙ, 10.0);
-        prices.put(DrinksMachine.ЛИМОНАД, 20.0);
-        prices.put(DrinksMachine.МАХИТО, 30.0);
-        prices.put(DrinksMachine.МИНЕРАЛКА, 15.0);
-        prices.put(DrinksMachine.КОКА_КОЛА, 25.0);
+        prices.put(DrinksMachine.COFFEE, 15.0);
+        prices.put(DrinksMachine.TEA, 10.0);
+        prices.put(DrinksMachine.LEMONADE, 20.0);
+        prices.put(DrinksMachine.MOJITO, 30.0);
+        prices.put(DrinksMachine.MINERAL_WATER, 15.0);
+        prices.put(DrinksMachine.COCA_COLA, 25.0);
     }
 
     private int quantity;
@@ -37,3 +37,10 @@ class Drinks {
         return totalPrice;
     }
 }
+
+
+
+
+
+
+
