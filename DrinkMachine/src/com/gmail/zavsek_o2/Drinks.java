@@ -3,30 +3,70 @@ package com.gmail.zavsek_o2;
 import java.util.HashMap;
 import java.util.Map;
 
-class Drinks {
-    private static final Map<DrinksMachine, Double> prices = new HashMap<>();
-
-    static {
-        prices.put(DrinksMachine.COFFEE, 15.0);
-        prices.put(DrinksMachine.TEA, 10.0);
-        prices.put(DrinksMachine.LEMONADE, 20.0);
-        prices.put(DrinksMachine.MOJITO, 30.0);
-        prices.put(DrinksMachine.MINERAL_WATER, 15.0);
-        prices.put(DrinksMachine.COCA_COLA, 25.0);
-    }
-
+public class Drinks {
     private int quantity;
     private double totalPrice;
 
-    public void makeDrink(DrinksMachine drinksMachine) {
-        double price = prices.getOrDefault(drinksMachine, 0.0);
-        if (price > 0.0) {
-            quantity++;
-            totalPrice += price;
-            System.out.println("Приготовлен напиток: " + drinksMachine);
-        } else {
-            System.out.println("Неизвестный напиток: " + drinksMachine);
+    public void makeDrink(DrinksMachine drink) {
+        switch (drink) {
+            case COFFEE:
+                makeCoffee();
+                break;
+            case TEA:
+                makeTea();
+                break;
+            case LEMONADE:
+                makeLemonade();
+                break;
+            case MOJITO:
+                makeMojito();
+                break;
+            case MINERAL_WATER:
+                makeMineralWater();
+                break;
+            case COCA_COLA:
+                makeCocaCola();
+                break;
+            default:
+                System.out.println("Не знаю как приготовить напиток");
+                break;
         }
+    }
+
+    private void makeCoffee() {
+        quantity++;
+        totalPrice += 15;
+        System.out.println("Кофе приготовлено");
+    }
+
+    private void makeTea() {
+        quantity++;
+        totalPrice += 10;
+        System.out.println("Чай приготовлено");
+    }
+
+    private void makeLemonade() {
+        quantity++;
+        totalPrice += 20;
+        System.out.println("Лимонад приготовлено");
+    }
+
+    private void makeMojito() {
+        quantity++;
+        totalPrice += 35;
+        System.out.println("Мохито приготовлено");
+    }
+
+    private void makeMineralWater() {
+        quantity++;
+        totalPrice += 15;
+        System.out.println("Минеральная вода приготовлена");
+    }
+
+    private void makeCocaCola() {
+        quantity++;
+        totalPrice += 35;
+        System.out.println("Кока-Кола приготовлена");
     }
 
     public int getQuantity() {
@@ -37,6 +77,7 @@ class Drinks {
         return totalPrice;
     }
 }
+
 
 
 

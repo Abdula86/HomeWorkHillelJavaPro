@@ -11,28 +11,11 @@ public class Main {
             System.out.println("Выберите напиток (1 - Кофе, 2 - Чай, 3 - Лимонад, 4 - Мохито, 5 - Минеральная вода, 6 - Кока-Кола):");
             int choice = scanner.nextInt();
 
-            switch (choice) {
-                case 1:
-                    drinks.makeDrink(DrinksMachine.COFFEE);
-                    break;
-                case 2:
-                    drinks.makeDrink(DrinksMachine.TEA);
-                    break;
-                case 3:
-                    drinks.makeDrink(DrinksMachine.LEMONADE);
-                    break;
-                case 4:
-                    drinks.makeDrink(DrinksMachine.MOJITO);
-                    break;
-                case 5:
-                    drinks.makeDrink(DrinksMachine.MINERAL_WATER);
-                    break;
-                case 6:
-                    drinks.makeDrink(DrinksMachine.COCA_COLA);
-                    break;
-                default:
-                    System.out.println("Не знаю как приготовить напиток");
-                    break;
+            if (choice >= 1 && choice <= DrinksMachine.values().length) {
+                DrinksMachine desiredDrink = DrinksMachine.values()[choice - 1];
+                drinks.makeDrink(desiredDrink);
+            } else {
+                System.out.println("Не знаю как приготовить напиток");
             }
 
             System.out.println("Заказано " + drinks.getQuantity() + " напитков");
@@ -48,5 +31,6 @@ public class Main {
         System.out.println("Вам необходимо заплатить: " + drinks.getTotalPrice() + " грн");
     }
 }
+
 
 
