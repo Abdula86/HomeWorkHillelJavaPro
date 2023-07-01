@@ -81,6 +81,33 @@ class MyArrayListTest {
     }
 
     @Test
+    void addInvalidIndex() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> list.add("value", -1));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> list.add("value", 10));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> list.add("value", 100));
+    }
+
+    @Test
+    void deleteInvalidIndex() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> list.delete(-1));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> list.delete(10));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> list.delete(100));
+    }
+
+    @Test
+    void deleteLastElement() {
+        for (int i = 0; i < 16; i++) {
+            list.addLast("element#" + i);
+        }
+
+        String deletedElement = list.delete(15);
+
+        Assertions.assertEquals("element#15", deletedElement);
+        Assertions.assertFalse(list.isEmpty());
+        Assertions.assertEquals(15, list.size());
+    }
+
+    @Test
     void delete() {
         for (int i = 0; i < 5; i++) {
             list.addLast("element#" + i);
